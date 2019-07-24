@@ -217,207 +217,6 @@
     "filename": "/packages/material-ui-lab/src/Rating/Rating.js",
     "inheritance": null
   },
-  "SpeedDial": {
-    "description": "",
-    "methods": [],
-    "props": {
-      "ariaLabel": {
-        "type": {
-          "name": "string"
-        },
-        "required": true,
-        "description": "The aria-label of the `Button` element.\nAlso used to provide the `id` for the `SpeedDial` element and its children."
-      },
-      "ButtonProps": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Properties applied to the [`Button`](/api/button/) element.",
-        "defaultValue": {
-          "value": "{}",
-          "computed": false
-        }
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": true,
-        "description": "SpeedDialActions to display when the SpeedDial is `open`."
-      },
-      "classes": {
-        "type": {
-          "name": "object"
-        },
-        "required": true,
-        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "@ignore"
-      },
-      "direction": {
-        "type": {
-          "name": "enum",
-          "value": [
-            {
-              "value": "'up'",
-              "computed": false
-            },
-            {
-              "value": "'down'",
-              "computed": false
-            },
-            {
-              "value": "'left'",
-              "computed": false
-            },
-            {
-              "value": "'right'",
-              "computed": false
-            }
-          ]
-        },
-        "required": false,
-        "description": "The direction the actions open relative to the floating action button.",
-        "defaultValue": {
-          "value": "'up'",
-          "computed": false
-        }
-      },
-      "hidden": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "If `true`, the SpeedDial will be hidden.",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
-      "icon": {
-        "type": {
-          "name": "element"
-        },
-        "required": true,
-        "description": "The icon to display in the SpeedDial Floating Action Button. The `SpeedDialIcon` component\nprovides a default Icon with animation."
-      },
-      "onClick": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "@ignore"
-      },
-      "onClose": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Callback fired when the component requests to be closed.\n\n@param {object} event The event source of the callback\n@param {string} key The key pressed"
-      },
-      "onKeyDown": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "@ignore"
-      },
-      "open": {
-        "type": {
-          "name": "bool"
-        },
-        "required": true,
-        "description": "If `true`, the SpeedDial is open."
-      },
-      "openIcon": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The icon to display in the SpeedDial Floating Action Button when the SpeedDial is open."
-      },
-      "TransitionComponent": {
-        "type": {
-          "name": "elementType"
-        },
-        "required": false,
-        "description": "The component used for the transition.",
-        "defaultValue": {
-          "value": "Zoom",
-          "computed": true
-        }
-      },
-      "transitionDuration": {
-        "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "number"
-            },
-            {
-              "name": "shape",
-              "value": {
-                "enter": {
-                  "name": "number",
-                  "required": false
-                },
-                "exit": {
-                  "name": "number",
-                  "required": false
-                }
-              }
-            }
-          ]
-        },
-        "required": false,
-        "description": "The duration for the transition, in milliseconds.\nYou may specify a single timeout for all transitions, or individually with an object.",
-        "defaultValue": {
-          "value": "{\n  enter: duration.enteringScreen,\n  exit: duration.leavingScreen,\n}",
-          "computed": false
-        }
-      },
-      "TransitionProps": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Properties applied to the `Transition` element."
-      }
-    },
-    "name": "SpeedDial",
-    "styles": {
-      "classes": [
-        "root",
-        "fab",
-        "directionUp",
-        "directionDown",
-        "directionLeft",
-        "directionRight",
-        "actions",
-        "actionsClosed"
-      ],
-      "name": "MuiSpeedDial",
-      "descriptions": {
-        "root": "Styles applied to the root element.",
-        "fab": "Styles applied to the Button component.",
-        "directionUp": "Styles applied to the root and action container elements when direction=\"up\"",
-        "directionDown": "Styles applied to the root and action container elements when direction=\"down\"",
-        "directionLeft": "Styles applied to the root and action container elements when direction=\"left\"",
-        "directionRight": "Styles applied to the root and action container elements when direction=\"right\"",
-        "actions": "Styles applied to the actions (`children` wrapper) element.",
-        "actionsClosed": "Styles applied to the actions (`children` wrapper) element if `open={false}`."
-      }
-    },
-    "spread": true,
-    "filename": "/packages/material-ui-lab/src/SpeedDial/SpeedDial.js",
-    "inheritance": null
-  },
   "SpeedDialAction": {
     "description": "",
     "methods": [],
@@ -883,6 +682,207 @@
     },
     "spread": true,
     "filename": "/packages/material-ui-lab/src/ToggleButtonGroup/ToggleButtonGroup.js",
+    "inheritance": null
+  },
+  "SpeedDial": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "ariaLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The aria-label of the `Button` element.\nAlso used to provide the `id` for the `SpeedDial` element and its children."
+      },
+      "ButtonProps": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Properties applied to the [`Button`](/api/button/) element.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "SpeedDialActions to display when the SpeedDial is `open`."
+      },
+      "classes": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "direction": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'up'",
+              "computed": false
+            },
+            {
+              "value": "'down'",
+              "computed": false
+            },
+            {
+              "value": "'left'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The direction the actions open relative to the floating action button.",
+        "defaultValue": {
+          "value": "'up'",
+          "computed": false
+        }
+      },
+      "hidden": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, the SpeedDial will be hidden.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "icon": {
+        "type": {
+          "name": "element"
+        },
+        "required": true,
+        "description": "The icon to display in the SpeedDial Floating Action Button. The `SpeedDialIcon` component\nprovides a default Icon with animation."
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "onClose": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback fired when the component requests to be closed.\n\n@param {object} event The event source of the callback\n@param {string} key The key pressed"
+      },
+      "onKeyDown": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "If `true`, the SpeedDial is open."
+      },
+      "openIcon": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The icon to display in the SpeedDial Floating Action Button when the SpeedDial is open."
+      },
+      "TransitionComponent": {
+        "type": {
+          "name": "elementType"
+        },
+        "required": false,
+        "description": "The component used for the transition.",
+        "defaultValue": {
+          "value": "Zoom",
+          "computed": true
+        }
+      },
+      "transitionDuration": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "shape",
+              "value": {
+                "enter": {
+                  "name": "number",
+                  "required": false
+                },
+                "exit": {
+                  "name": "number",
+                  "required": false
+                }
+              }
+            }
+          ]
+        },
+        "required": false,
+        "description": "The duration for the transition, in milliseconds.\nYou may specify a single timeout for all transitions, or individually with an object.",
+        "defaultValue": {
+          "value": "{\n  enter: duration.enteringScreen,\n  exit: duration.leavingScreen,\n}",
+          "computed": false
+        }
+      },
+      "TransitionProps": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Properties applied to the `Transition` element."
+      }
+    },
+    "name": "SpeedDial",
+    "styles": {
+      "classes": [
+        "root",
+        "fab",
+        "directionUp",
+        "directionDown",
+        "directionLeft",
+        "directionRight",
+        "actions",
+        "actionsClosed"
+      ],
+      "name": "MuiSpeedDial",
+      "descriptions": {
+        "root": "Styles applied to the root element.",
+        "fab": "Styles applied to the Button component.",
+        "directionUp": "Styles applied to the root and action container elements when direction=\"up\"",
+        "directionDown": "Styles applied to the root and action container elements when direction=\"down\"",
+        "directionLeft": "Styles applied to the root and action container elements when direction=\"left\"",
+        "directionRight": "Styles applied to the root and action container elements when direction=\"right\"",
+        "actions": "Styles applied to the actions (`children` wrapper) element.",
+        "actionsClosed": "Styles applied to the actions (`children` wrapper) element if `open={false}`."
+      }
+    },
+    "spread": true,
+    "filename": "/packages/material-ui-lab/src/SpeedDial/SpeedDial.js",
     "inheritance": null
   }
 }

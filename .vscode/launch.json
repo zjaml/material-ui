@@ -7,12 +7,22 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug buildapi",
+      "name": "Debug extractAPI",
       "program": "${workspaceFolder}/docs/scripts/extractAPIs.js",
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
       "env": { "BABEL_ENV": "test" },
       "runtimeArgs": ["--nolazy"],
-      "args": ["./packages/material-ui/src"]
+      "args": ["./packages/material-ui/src", "./docs/pages/api"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug buildapi",
+      "program": "${workspaceFolder}/docs/scripts/buildApi.js",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/babel-node",
+      "env": { "BABEL_ENV": "test" },
+      "runtimeArgs": ["--nolazy"],
+      "args": ["./packages/material-ui/src", "./docs/pages/api"]
     }
   ]
 }

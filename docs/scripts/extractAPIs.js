@@ -128,8 +128,11 @@ async function extract(options) {
   reactAPI.styles = styles;
   reactAPI.spread = spread;
 
-  const testInfo = parseTest(componentObject.filename);
+  const testInfo = await parseTest(componentObject.filename);
   // no Object.assign to visually check for collisions
+  // reactAPI.forwardsRefTo = testInfo.forwardsRefTo;
+  // reactAPI.strictModeReady = testInfo.strictModeReady;
+
   // Relative location in the file system.
   reactAPI.filename = componentObject.filename.replace(rootDirectory, '');
   reactAPI.inheritance = getInheritance(testInfo, src);
