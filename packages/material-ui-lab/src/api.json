@@ -1,0 +1,888 @@
+{
+  "Rating": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "classes": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, the rating will be disabled.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "emptyIcon": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The icon to display when empty."
+      },
+      "getLabelText": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Accepts a function which returns a string value that provides a user-friendly name for the current value of the rating.\n\n@param {number} value The rating label's value to format",
+        "defaultValue": {
+          "value": "function defaultLabelText(value) {\n  return `${value} Star${value !== 1 ? 's' : ''}`;\n}",
+          "computed": false
+        }
+      },
+      "icon": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The icon to display.",
+        "defaultValue": {
+          "value": "<Star fontSize=\"inherit\" />",
+          "computed": false
+        }
+      },
+      "IconContainerComponent": {
+        "type": {
+          "name": "elementType"
+        },
+        "required": false,
+        "description": "The component containing the icon.",
+        "defaultValue": {
+          "value": "function IconContainer(props) {\n  const { value, ...other } = props;\n  return <div {...other} />;\n}",
+          "computed": false
+        }
+      },
+      "max": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Maximum rating.",
+        "defaultValue": {
+          "value": "5",
+          "computed": false
+        }
+      },
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Name attribute of the radio `input` elements."
+      },
+      "onChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback fired when the value changes.\n\n@param {object} event The event source of the callback\n@param {number} value The new value"
+      },
+      "onChangeActive": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback function that is fired when the hover state changes.\n\n@param {object} event The event source of the callback\n@param {any} value The new value"
+      },
+      "onMouseLeave": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "onMouseMove": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "precision": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The minimum increment value change allowed.",
+        "defaultValue": {
+          "value": "1",
+          "computed": false
+        }
+      },
+      "readOnly": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Removes all hover effects and pointer events.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'small'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'large'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The size of the rating.",
+        "defaultValue": {
+          "value": "'medium'",
+          "computed": false
+        }
+      },
+      "value": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The rating value.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      }
+    },
+    "name": "Rating",
+    "styles": {
+      "classes": [
+        "root",
+        "sizeSmall",
+        "sizeLarge",
+        "readOnly",
+        "disabled",
+        "focusVisible",
+        "visuallyhidden",
+        "pristine",
+        "label",
+        "icon",
+        "iconEmpty",
+        "iconFilled",
+        "iconHover",
+        "iconFocus",
+        "iconActive",
+        "decimal"
+      ],
+      "name": "MuiRating",
+      "descriptions": {
+        "root": "Styles applied to the root element.",
+        "sizeSmall": "Styles applied to the root element if `size=\"small\"`.",
+        "sizeLarge": "Styles applied to the root element if `size=\"large\"`.",
+        "readOnly": "Styles applied to the root element if `readOnly={true}`.",
+        "disabled": "Pseudo-class applied to the root element if `disabled={true}`.",
+        "focusVisible": "Pseudo-class applied to the root element if keyboard focused.",
+        "visuallyhidden": "Visually hide an element.",
+        "pristine": "Styles applied to the pristine label.",
+        "label": "Styles applied to the label elements.",
+        "icon": "Styles applied to the icon wrapping elements.",
+        "iconEmpty": "Styles applied to the icon wrapping elements when empty.",
+        "iconFilled": "Styles applied to the icon wrapping elements when filled.",
+        "iconHover": "Styles applied to the icon wrapping elements when hover.",
+        "iconFocus": "Styles applied to the icon wrapping elements when focus.",
+        "iconActive": "Styles applied to the icon wrapping elements when active.",
+        "decimal": "Styles applied to the icon wrapping elements when decimals are necessary."
+      }
+    },
+    "spread": true,
+    "filename": "/packages/material-ui-lab/src/Rating/Rating.js",
+    "inheritance": null
+  },
+  "SpeedDial": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "ariaLabel": {
+        "type": {
+          "name": "string"
+        },
+        "required": true,
+        "description": "The aria-label of the `Button` element.\nAlso used to provide the `id` for the `SpeedDial` element and its children."
+      },
+      "ButtonProps": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Properties applied to the [`Button`](/api/button/) element.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "SpeedDialActions to display when the SpeedDial is `open`."
+      },
+      "classes": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "direction": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'up'",
+              "computed": false
+            },
+            {
+              "value": "'down'",
+              "computed": false
+            },
+            {
+              "value": "'left'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The direction the actions open relative to the floating action button.",
+        "defaultValue": {
+          "value": "'up'",
+          "computed": false
+        }
+      },
+      "hidden": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, the SpeedDial will be hidden.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "icon": {
+        "type": {
+          "name": "element"
+        },
+        "required": true,
+        "description": "The icon to display in the SpeedDial Floating Action Button. The `SpeedDialIcon` component\nprovides a default Icon with animation."
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "onClose": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback fired when the component requests to be closed.\n\n@param {object} event The event source of the callback\n@param {string} key The key pressed"
+      },
+      "onKeyDown": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": true,
+        "description": "If `true`, the SpeedDial is open."
+      },
+      "openIcon": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The icon to display in the SpeedDial Floating Action Button when the SpeedDial is open."
+      },
+      "TransitionComponent": {
+        "type": {
+          "name": "elementType"
+        },
+        "required": false,
+        "description": "The component used for the transition.",
+        "defaultValue": {
+          "value": "Zoom",
+          "computed": true
+        }
+      },
+      "transitionDuration": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "number"
+            },
+            {
+              "name": "shape",
+              "value": {
+                "enter": {
+                  "name": "number",
+                  "required": false
+                },
+                "exit": {
+                  "name": "number",
+                  "required": false
+                }
+              }
+            }
+          ]
+        },
+        "required": false,
+        "description": "The duration for the transition, in milliseconds.\nYou may specify a single timeout for all transitions, or individually with an object.",
+        "defaultValue": {
+          "value": "{\n  enter: duration.enteringScreen,\n  exit: duration.leavingScreen,\n}",
+          "computed": false
+        }
+      },
+      "TransitionProps": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Properties applied to the `Transition` element."
+      }
+    },
+    "name": "SpeedDial",
+    "styles": {
+      "classes": [
+        "root",
+        "fab",
+        "directionUp",
+        "directionDown",
+        "directionLeft",
+        "directionRight",
+        "actions",
+        "actionsClosed"
+      ],
+      "name": "MuiSpeedDial",
+      "descriptions": {
+        "root": "Styles applied to the root element.",
+        "fab": "Styles applied to the Button component.",
+        "directionUp": "Styles applied to the root and action container elements when direction=\"up\"",
+        "directionDown": "Styles applied to the root and action container elements when direction=\"down\"",
+        "directionLeft": "Styles applied to the root and action container elements when direction=\"left\"",
+        "directionRight": "Styles applied to the root and action container elements when direction=\"right\"",
+        "actions": "Styles applied to the actions (`children` wrapper) element.",
+        "actionsClosed": "Styles applied to the actions (`children` wrapper) element if `open={false}`."
+      }
+    },
+    "spread": true,
+    "filename": "/packages/material-ui-lab/src/SpeedDial/SpeedDial.js",
+    "inheritance": null
+  },
+  "SpeedDialAction": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "ButtonProps": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Properties applied to the [`Button`](/api/button/) component."
+      },
+      "classes": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "delay": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Adds a transition delay, to allow a series of SpeedDialActions to be animated.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "icon": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "The Icon to display in the SpeedDial Floating Action Button."
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "onKeyDown": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "@ignore",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "TooltipClasses": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Classes applied to the [`Tooltip`](/api/tooltip/) element."
+      },
+      "tooltipOpen": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Make the tooltip always visible when the SpeedDial is open.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "tooltipPlacement": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'bottom-end'",
+              "computed": false
+            },
+            {
+              "value": "'bottom-start'",
+              "computed": false
+            },
+            {
+              "value": "'bottom'",
+              "computed": false
+            },
+            {
+              "value": "'left-end'",
+              "computed": false
+            },
+            {
+              "value": "'left-start'",
+              "computed": false
+            },
+            {
+              "value": "'left'",
+              "computed": false
+            },
+            {
+              "value": "'right-end'",
+              "computed": false
+            },
+            {
+              "value": "'right-start'",
+              "computed": false
+            },
+            {
+              "value": "'right'",
+              "computed": false
+            },
+            {
+              "value": "'top-end'",
+              "computed": false
+            },
+            {
+              "value": "'top-start'",
+              "computed": false
+            },
+            {
+              "value": "'top'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Placement of the tooltip.",
+        "defaultValue": {
+          "value": "'left'",
+          "computed": false
+        }
+      },
+      "tooltipTitle": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "Label to display in the tooltip."
+      }
+    },
+    "name": "SpeedDialAction",
+    "styles": {
+      "classes": [
+        "button",
+        "buttonClosed"
+      ],
+      "name": "MuiSpeedDialAction",
+      "descriptions": {
+        "button": "Styles applied to the `Button` component.",
+        "buttonClosed": "Styles applied to the `Button` component if `open={false}`."
+      }
+    },
+    "spread": true,
+    "filename": "/packages/material-ui-lab/src/SpeedDialAction/SpeedDialAction.js",
+    "inheritance": {
+      "component": "Tooltip",
+      "pathname": "/api/tooltip"
+    }
+  },
+  "SpeedDialIcon": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "classes": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+      },
+      "icon": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The icon to display in the SpeedDial Floating Action Button."
+      },
+      "open": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "@ignore\nIf `true`, the SpeedDial is open."
+      },
+      "openIcon": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The icon to display in the SpeedDial Floating Action Button when the SpeedDial is open."
+      }
+    },
+    "name": "SpeedDialIcon",
+    "styles": {
+      "classes": [
+        "root",
+        "icon",
+        "iconOpen",
+        "iconWithOpenIconOpen",
+        "openIcon",
+        "openIconOpen"
+      ],
+      "name": "MuiSpeedDialIcon",
+      "descriptions": {
+        "root": "Styles applied to the root element.",
+        "icon": "Styles applied to the icon component.",
+        "iconOpen": "Styles applied to the icon component if `open={true}`.",
+        "iconWithOpenIconOpen": "Styles applied to the icon when and `openIcon` is provided & if `open={true}`.",
+        "openIcon": "Styles applied to the `openIcon` if provided.",
+        "openIconOpen": "Styles applied to the `openIcon` if provided & if `open={true}`."
+      }
+    },
+    "spread": true,
+    "filename": "/packages/material-ui-lab/src/SpeedDialIcon/SpeedDialIcon.js",
+    "inheritance": null
+  },
+  "ToggleButton": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "The content of the button."
+      },
+      "classes": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, the button will be disabled.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disableFocusRipple": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, the  keyboard focus ripple will be disabled.\n`disableRipple` must also be true.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "disableRipple": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, the ripple effect will be disabled.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "onChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "onClick": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "selected": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, the button will be rendered in an active state."
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'small'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'large'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "@ignore",
+        "defaultValue": {
+          "value": "'medium'",
+          "computed": false
+        }
+      },
+      "value": {
+        "type": {
+          "name": "any"
+        },
+        "required": true,
+        "description": "The value to associate with the button when selected in a\nToggleButtonGroup."
+      }
+    },
+    "name": "ToggleButton",
+    "styles": {
+      "classes": [
+        "root",
+        "disabled",
+        "selected",
+        "label",
+        "sizeSmall",
+        "sizeLarge"
+      ],
+      "name": "MuiToggleButton",
+      "descriptions": {
+        "root": "Styles applied to the root element.",
+        "disabled": "Pseudo-class applied to the root element if `disabled={true}`.",
+        "selected": "Pseudo-class applied to the root element if `selected={true}`.",
+        "label": "Styles applied to the `label` wrapper element.",
+        "sizeSmall": "Styles applied to the root element if `size=\"small\"`.",
+        "sizeLarge": "Styles applied to the root element if `size=\"large\"`."
+      }
+    },
+    "spread": true,
+    "filename": "/packages/material-ui-lab/src/ToggleButton/ToggleButton.js",
+    "inheritance": {
+      "component": "ButtonBase",
+      "pathname": "/api/button-base"
+    }
+  },
+  "ToggleButtonGroup": {
+    "description": "",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": true,
+        "description": "The content of the button."
+      },
+      "classes": {
+        "type": {
+          "name": "object"
+        },
+        "required": true,
+        "description": "Override or extend the styles applied to the component.\nSee [CSS API](#css) below for more details."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "@ignore"
+      },
+      "exclusive": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If `true`, only allow one of the child ToggleButton values to be selected.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "onChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback fired when the value changes.\n\n@param {object} event The event source of the callback\n@param {object} value of the selected buttons. When `exclusive` is true\nthis is a single value; when false an array of selected values. If no value\nis selected and `exclusive` is true the value is null; when false an empty array."
+      },
+      "size": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'small'",
+              "computed": false
+            },
+            {
+              "value": "'medium'",
+              "computed": false
+            },
+            {
+              "value": "'large'",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The size of the buttons.",
+        "defaultValue": {
+          "value": "'medium'",
+          "computed": false
+        }
+      },
+      "value": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "The currently selected value within the group or an array of selected\nvalues when `exclusive` is false."
+      }
+    },
+    "name": "ToggleButtonGroup",
+    "styles": {
+      "classes": [
+        "root"
+      ],
+      "name": "MuiToggleButtonGroup",
+      "descriptions": {
+        "root": "Styles applied to the root element."
+      }
+    },
+    "spread": true,
+    "filename": "/packages/material-ui-lab/src/ToggleButtonGroup/ToggleButtonGroup.js",
+    "inheritance": null
+  }
+}
