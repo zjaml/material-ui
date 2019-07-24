@@ -2,7 +2,7 @@
 # global .gitignore configuration file.
 # However, in order to prevent issues. We also ignore editors' files here.
 .idea
-.vscode
+# .vscode
 
 *.log
 .DS_STORE
